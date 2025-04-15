@@ -15,6 +15,10 @@ const App: React.FC = () => {
     setCount(0);
   };
 
+  const doubleCount = (): void => {
+    setCount(prevCount => prevCount * 2);
+  };
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -79,6 +83,21 @@ const App: React.FC = () => {
           }}
         >
           +
+        </button>
+        
+        <button 
+          onClick={doubleCount} 
+          style={{ 
+            padding: '10px 20px', 
+            fontSize: '1.2rem', 
+            backgroundColor: '#3498db', 
+            color: 'white', 
+            border: 'none', 
+            borderRadius: '5px', 
+            cursor: 'pointer' 
+          }}
+        >
+          Double
         </button>
       </div>
     </div>
